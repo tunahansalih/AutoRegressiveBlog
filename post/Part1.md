@@ -1,16 +1,10 @@
 ---
-layout: post
-title: 'Generating Pixels One by One'
-excerpt: 'Your First Autoregressive Image Generation Model'
+title: TITLE
 mathjax: true
-modified: '03/06/2025, 15:46:00'
+categories:
+  - category
 tags:
-  - autoregressive
-  - generative-ai
-  - tutorial
-comments: true
-category: blog
-published: true
+  - tag
 ---
 
  ## Generating Pixels One by One: Your First Autoregressive Image Generation Model
@@ -2038,6 +2032,38 @@ if n_samples_v3 > 0:
     
 <img src="/images/blog/AR-part1Part1_files/Part1_37_3.png">
     
+
+
+# Conclusion: From Random Streaks to Recognizable Digits
+
+Our exploration of autoregressive image generation has taken us on an iterative journey, starting from a simple pixel predictor to a a conditional digit generator. The progression through Models V1, V2 and V3 has been a step by step improvement, highlighing key principles in building these systems.
+
+*Model V1*, our simplest MLP using only one hot encoded pizel valus without any spatial awarenes, prodiced results,that, as seen in the generated images, were largely abstract and dominated by local, repetitive patterns like horizontal streaks. It was a good example of why we need to encode spatial information in our model.
+
+*Model V2* introduced learned positional embeddings. The generated images immediately began to exhibit more global structure, with a clear shift towards recognizable (albeit nor perfectly formed) digits. While not perfect, this confirmed our hypothesis: spatial information is crucial for the model to learn more meaningful image patterns. eyond local correlations.
+
+*Model V3* was the culmination of these insights. By replacing one-hot encoding with learnable token embeddings for pixel intensities and, most importantly, introducing class conditioning, we achieved a breakthrough. As the generated images for Model V3 demonstrate, the model can now generate images that are not only more coherent but also represent specific, *requested digits*.
+
+*Limitations and Future Directions:*
+
+It's important to note that our MLP-based models are incredibly simple. The fixed `CONTEXT_LENGTH` limits the long-range dependencies the model can capture. Quantization bins also lead to a somewhat blocky appearance.
+
+The generations don't match the quality of state-of-the-art generative models. However, this was never the primary goal; the aim was to understand the foundational concepts of autoregressive generation.
+
+I hope this step-by-step progression has been as enlightening for you to read as it was for me to build and explore. Generating images pixel by pixel, even simple ones, truly demystifies some of the magic behind generative AI. The core idea of predicting one piece at a time, conditioned on what came before, remains a powerful and versatile paradigm in the world of artificial intelligence.
+
+Happy generating!
+
+
+*Note: I hope I will continue this series with more complex models and more interesting applications.*
+
+
+
+
+
+
+
+
 
 
 
