@@ -1,5 +1,4 @@
 version = 1
-revision = 1
 requires-python = ">=3.13"
 
 [[package]]
@@ -102,6 +101,7 @@ name = "autoregressiveblog"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "ipython" },
     { name = "jupyter" },
     { name = "matplotlib" },
     { name = "numpy" },
@@ -112,6 +112,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
+    { name = "ipython", specifier = ">=9.2.0" },
     { name = "jupyter", specifier = ">=1.1.1" },
     { name = "matplotlib", specifier = ">=3.10.3" },
     { name = "numpy", specifier = "<2.0.0" },
