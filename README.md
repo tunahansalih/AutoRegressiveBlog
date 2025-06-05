@@ -2,7 +2,7 @@
 
 This is a simple implementation of autoregressive image generation.
 
-The code is based on the blog post [Generating Pixels One by One: Your First Autoregressive Image Generation Model](https://tunahansalih.github.io/posts/autoregressive-image-generation-part-1/).
+The code is based on the blog post [Generating Pixels One by One: Your First Autoregressive Image Generation Model](https://tunahansalih.github.io/blog/autoregressive-vision-generation-part-1/).
 
 To run the code, you can use `uv`
 
